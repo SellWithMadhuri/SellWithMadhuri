@@ -1,156 +1,115 @@
 document.addEventListener('DOMContentLoaded', () => {
-    let currentSlide = 0;
-    const viewport = document.getElementById('slides-viewport');
-    const progressBar = document.getElementById('progress-bar');
-    const slideCounter = document.getElementById('slide-counter');
-    const gridModal = document.getElementById('grid-modal');
-    const gridContainer = document.getElementById('grid-container');
-
-    // 1. Render All Slides
-    function renderSlides() {
-        viewport.innerHTML = '';
-        SLIDES.forEach((slide, index) => {
-            const card = document.createElement('div');
-            card.className = `slide-card ${index === 0 ? 'active' : ''}`;
-            card.id = `slide-${index}`;
-
-            if (slide.type === 'hero') {
-                card.classList.add('hero-layout');
-                card.innerHTML = `
-                    <div class="slide-tag">${slide.tag}</div>
-                    <div class="hero-title">${slide.title}</div>
-                    <div class="hero-subtitle">${slide.subtitle}</div>
-                    <div class="hero-pills">
-                        ${slide.highlights.map(h => `<div class="pill">${h}</div>`).join('')}
-                    </div>
-                `;
-            } else if (slide.type === 'stats') {
-                card.innerHTML = `
-                    <div class="slide-header">
-                        <div class="slide-tag">${slide.category}</div>
-                        <div class="slide-title">${slide.title}</div>
-                        <div class="slide-desc">${slide.desc}</div>
-                    </div>
-                    <div class="stats-grid">
-                        ${slide.stats.map(s => `
-                            <div class="stat-box">
-                                <div class="stat-val">${s.value}</div>
-                                <div class="stat-lbl">${s.label}</div>
-                            </div>
-                        `).join('')}
-                    </div>
-                `;
-            } else if (slide.type === 'card-grid') {
-                card.innerHTML = `
-                    <div class="slide-header">
-                        <div class="slide-tag">${slide.category}</div>
-                        <div class="slide-title">${slide.title}</div>
-                        <div class="slide-desc">${slide.desc}</div>
-                    </div>
-                    <div class="card-grid-container">
-                        ${slide.items.map(item => `
-                            <div class="grid-item-card">${item}</div>
-                        `).join('')}
-                    </div>
-                `;
-            } else if (slide.type === 'highlight-box') {
-                card.innerHTML = `
-                    <div class="slide-header">
-                        <div class="slide-tag">${slide.category}</div>
-                        <div class="slide-title">${slide.title}</div>
-                        <div class="slide-desc">${slide.desc}</div>
-                    </div>
-                    <div class="card-grid-container" style="grid-template-columns: 1fr;">
-                        ${slide.points.map(p => `
-                            <div class="grid-item-card" style="border-left-color: var(--accent-gold); font-size: 20px; padding: 24px;">✔ ${p}</div>
-                        `).join('')}
-                    </div>
-                `;
-            } else if (slide.type === 'compare') {
-                card.innerHTML = `
-                    <div class="slide-header">
-                        <div class="slide-tag">${slide.category}</div>
-                        <div class="slide-title">${slide.title}</div>
-                        <div class="slide-desc">${slide.desc}</div>
-                    </div>
-                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 32px; margin-top: 32px;">
-                        <div class="stat-box" style="border-color: #64748b;">
-                            <div class="stat-lbl" style="font-size: 16px;">${slide.box1.title}</div>
-                            <div class="stat-val" style="color: #94a3b8; margin-top: 12px; font-size: 32px;">${slide.box1.detail}</div>
-                        </div>
-                        <div class="stat-box" style="border-color: var(--accent-green);">
-                            <div class="stat-lbl" style="font-size: 16px; color: var(--accent-green);">${slide.box2.title}</div>
-                            <div class="stat-val" style="margin-top: 12px; font-size: 32px;">${slide.box2.detail}</div>
-                        </div>
-                    </div>
-                `;
-            }
-            viewport.appendChild(card);
-        });
-    }
-
-    // 2. Render Grid Overview Thumbnails
-    function renderGridModal() {
-        gridContainer.innerHTML = '';
-        SLIDES.forEach((slide, index) => {
-            const thumb = document.createElement('div');
-            thumb.className = 'thumb-card';
-            thumb.innerHTML = `
-                <div class="thumb-num">SLIDE ${index + 1}</div>
-                <div class="thumb-title">${slide.title}</div>
-            `;
-            thumb.addEventListener('click', () => {
-                goToSlide(index);
-                gridModal.classList.remove('open');
-            });
-            gridContainer.appendChild(thumb);
-        });
-    }
-
-    // 3. Navigation Controls
-    function goToSlide(index) {
-        if (index < 0 || index >= SLIDES.length) return;
-        document.querySelectorAll('.slide-card').forEach(c => c.classList.remove('active'));
-        currentSlide = index;
-        document.getElementById(`slide-${currentSlide}`).classList.add('active');
-        
-        // Update Footer Progress
-        slideCounter.textContent = `Slide ${currentSlide + 1} of ${SLIDES.length}`;
-        const pct = ((currentSlide + 1) / SLIDES.length) * 100;
-        progressBar.style.width = `${pct}%`;
-    }
-
-    document.getElementById('next-btn').addEventListener('click', () => goToSlide(currentSlide + 1));
-    document.getElementById('prev-btn').addEventListener('click', () => goToSlide(currentSlide - 1));
     
-    document.getElementById('btn-overview').addEventListener('click', () => {
-        gridModal.classList.add('open');
-    });
+    // 1. Render Master Plan Feature Cards
+    const FEATURES = [
+        "60% हरियाली और खुले स्थान / 40% सुव्यवस्थित विकास क्षेत्र",
+        "22 गांवों में 22 टाउन प्लानिंग (TP) योजनाएं",
+        "विशेष ज़ोन: इंडस्ट्रियल, नॉलेज एंड आईटी, आवासीय, लॉजिस्टिक्स",
+        "केंद्रीय वाणिज्यिक कॉरिडोर और पर्यटन रिसॉर्ट ज़ोन",
+        "100% भूमिगत डक्टिंग और ऑप्टिकल फाइबर केबलिंग",
+        "24/7 ऑटोमेटेड SCADA जल आपूर्ति और सीवरेज रीसाइक्लिंग",
+        "अहमदाबाद-धोलेरा 4 लेन एक्सप्रेसवे & ग्रीनफील्ड इंटरनेशनल एयरपोर्ट",
+        "सोलर पार्क 5,000 MW नवीकरणीय ऊर्जा हब"
+    ];
 
-    document.getElementById('close-grid').addEventListener('click', () => {
-        gridModal.classList.remove('open');
-    });
+    const featuresContainer = document.getElementById('features-container');
+    if (featuresContainer) {
+        featuresContainer.innerHTML = '';
+        FEATURES.forEach(item => {
+            const card = document.createElement('div');
+            card.className = 'feature-item-card';
+            card.innerHTML = `✔ ${item}`;
+            featuresContainer.appendChild(card);
+        });
+    }
 
-    document.getElementById('btn-fullscreen').addEventListener('click', () => {
-        if (!document.fullscreenElement) {
-            document.documentElement.requestFullscreen();
-        } else {
-            if (document.exitFullscreen) document.exitFullscreen();
+    // 2. Render Downloads & Brochure Section
+    const DOWNLOADS = [
+        {
+            title: "Sanctuary Home Official Brochure",
+            icon: "📄",
+            desc: "सैंक्चुअरी होम प्रोजेक्ट ब्रोशर - लेआउट प्लॉन्स, लोकेशन एडवांटेज और प्रोजेक्ट हाइलाइट्स।",
+            path: "resources/Sancuary home brochure.pdf",
+            type: "PDF (19.6 MB)"
+        },
+        {
+            title: "Dholera Smart City Presentation (PPTX)",
+            icon: "📊",
+            desc: "धोलेरा स्मार्ट सिटी 30-स्लाइड्स प्रेजेंटेशन पावरपॉइंट डेक।",
+            path: "resources/Dholera_Smart_City_30_Slide_Presentation.pptx",
+            type: "PPTX (72.6 KB)"
+        },
+        {
+            title: "Dholera Hindi Presentation (PPTX)",
+            icon: "🇮🇳",
+            desc: "धोलेरा स्मार्ट सिटी 30-स्लाइड्स हिंदी प्रेजेंटेशन पावरपॉइंट डेक।",
+            path: "resources/Dholera_Smart_City_30_Slide_Hindi_Presentation.pptx",
+            type: "PPTX (76.8 KB)"
+        },
+        {
+            title: "Project Document Scan 1",
+            icon: "📁",
+            desc: "आधिकारिक दस्तावेज स्कैन फाइल (Adobe Scan 27-Jun-2026)",
+            path: "resources/Adobe Scan 27-Jun-2026.pdf",
+            type: "PDF (18.7 MB)"
+        },
+        {
+            title: "Project Document Scan 2",
+            icon: "📂",
+            desc: "सैंक्चुअरी होम अप्रूवल & टाइटल क्लियरेंस डॉक्यूमेंट्स",
+            path: "resources/SKM_C45826052714100.pdf",
+            type: "PDF (1.5 MB)"
+        },
+        {
+            title: "Project Document Scan 3",
+            icon: "📋",
+            desc: "धोलेरा SIR मास्टर प्लान डॉक्यूमेंट रीकैप",
+            path: "resources/Scan 2026-5-27 (18,33,50).pdf",
+            type: "PDF (4.5 MB)"
         }
-    });
+    ];
 
-    // Keyboard Shortcuts
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'ArrowRight' || e.key === 'Space' || e.key === 'PageDown') {
-            goToSlide(currentSlide + 1);
-        } else if (e.key === 'ArrowLeft' || e.key === 'PageUp') {
-            goToSlide(currentSlide - 1);
-        } else if (e.key.toLowerCase() === 'g') {
-            gridModal.classList.toggle('open');
-        }
-    });
+    const resourcesList = document.getElementById('resources-list');
+    if (resourcesList) {
+        resourcesList.innerHTML = '';
+        DOWNLOADS.forEach(res => {
+            const card = document.createElement('div');
+            card.className = 'res-card';
+            card.innerHTML = `
+                <div>
+                    <div class="res-icon">${res.icon}</div>
+                    <div class="res-title">${res.title}</div>
+                    <div class="res-desc">${res.desc}</div>
+                </div>
+                <a href="${res.path}" download class="download-link"><span>⬇️ डाउनलोड ${res.type}</span></a>
+            `;
+            resourcesList.appendChild(card);
+        });
+    }
 
-    renderSlides();
-    renderGridModal();
-    goToSlide(0);
+    // 3. Scroll-Triggered Animations (IntersectionObserver & Fallback)
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: "0px 0px -20px 0px"
+    };
+
+    if ('IntersectionObserver' in window) {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('in-view');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.anim-target').forEach(el => {
+            observer.observe(el);
+        });
+    } else {
+        // Fallback if IntersectionObserver is not supported
+        document.querySelectorAll('.anim-target').forEach(el => {
+            el.classList.add('in-view');
+        });
+    }
 });
+

@@ -1,60 +1,226 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DHOLERA SIR & Sanctuary Home - Cinematic 30-Slide Presentation</title>
+    <title>धोलेरा स्मार्ट सिटी & सैंक्चुअरी होम | ABDB रियलटेक</title>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Background FX -->
     <div class="stars-bg"></div>
     <div class="ambient-glow glow-1"></div>
     <div class="ambient-glow glow-2"></div>
+    <div class="ambient-glow glow-3"></div>
 
-    <!-- Presentation Top Header Bar -->
+    <!-- Sticky Header Navigation -->
     <header class="top-nav">
         <div class="brand">
             <span class="badge">ABDB रियलटेक</span>
             <span class="title-sub">धोलेरा स्मार्ट सिटी</span>
         </div>
-        <div class="controls">
-            <button id="btn-overview" title="Grid View (Press G)"><span>GRID</span> 🎛️</button>
-            <button id="btn-fullscreen" title="Toggle Fullscreen (F11)"><span>FULLSCREEN</span> ⛶</button>
-        </div>
+        <nav class="nav-links">
+            <a href="#hero">होम</a>
+            <a href="#overview">विज़न & आँकड़े</a>
+            <a href="#tata-hub">TATA सेमीकंडक्टर</a>
+            <a href="#master-plan">मास्टर प्लान</a>
+            <a href="#videos">प्रोजेक्ट वीडियोज़</a>
+            <a href="#downloads">डाउनलोड्स & ब्रोशर</a>
+        </nav>
     </header>
 
-    <!-- Slide Container -->
-    <main class="presentation-stage">
-        <div class="slides-viewport" id="slides-viewport">
-            <!-- Slides dynamically rendered here -->
-        </div>
+    <!-- Main Scrollable Content -->
+    <main class="content-container">
+
+        <!-- HERO SECTION -->
+        <section id="hero" class="hero-section anim-target">
+            <div class="hero-content">
+                <span class="tag-pill">ऑफिशिअल प्रोजेक्ट शोकेस</span>
+                <h1 class="hero-title">धोलेरा स्मार्ट सिटी <br><span class="highlight-gold">& सैंक्चुअरी होम</span></h1>
+                <p class="hero-subtitle">भारत का पहला प्लान्ड ग्रीनफील्ड स्मार्ट मेगासिटी | दिल्ली-मुंबई इंडस्ट्रियल कॉरिडोर (DMIC)</p>
+
+                <div class="hero-badges">
+                    <div class="pill">📍 डेवलपर: ABDB रियलटेक प्राइवेट लिमिटेड</div>
+                    <div class="pill gold">💰 शुरुआती दर: ₹6,250 / वर्ग गज</div>
+                    <div class="pill green">✔ NA / NOC / टाइटल क्लियर प्लॉट्स</div>
+                    <div class="pill blue">🏗️ TATA सेमीकंडक्टर हब पास में</div>
+                </div>
+
+                <div class="hero-actions">
+                    <a href="#downloads" class="btn btn-primary">📑 ब्रोशर डाउनलोड करें</a>
+                    <a href="#videos" class="btn btn-secondary">🎥 साइट वीडियो देखें</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- STATS & OVERVIEW SECTION -->
+        <section id="overview" class="section anim-target">
+            <div class="section-header text-center">
+                <span class="section-tag">बड़ा अवसर & विज़न</span>
+                <h2 class="section-title">1. धोलेरा SIR - भारत का भविष्य</h2>
+                <p class="section-desc">सिंगापुर से भी 1.25 गुना बड़ा 920 वर्ग किलोमीटर में फैला वर्ल्ड-क्लास स्मार्ट सिटी</p>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-val">920 sq km</div>
+                    <div class="stat-lbl">कुल क्षेत्रफल (सिंगापुर 728 sq km)</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-val">20,00,000</div>
+                    <div class="stat-lbl">अनुमानित भविष्य जनसंख्या</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-val">8,00,000+</div>
+                    <div class="stat-lbl">आगामी नई नौकरियां</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-val">₹6,250</div>
+                    <div class="stat-lbl">शुरुआती प्लॉट दर / वर्ग गज</div>
+                </div>
+            </div>
+
+            <div class="compare-box mt-4">
+                <div class="compare-card current">
+                    <h3>सिंगापुर (Singapore)</h3>
+                    <div class="big-txt">728 वर्ग किमी</div>
+                    <p>एशिया का प्रमुख वैश्विक वित्तीय केंद्र</p>
+                </div>
+                <div class="compare-card vs">
+                    <span>VS</span>
+                </div>
+                <div class="compare-card future">
+                    <h3>धोलेरा SIR (Dholera SIR)</h3>
+                    <div class="big-txt green-txt">920 वर्ग किमी</div>
+                    <p>भारत का पहला प्लैन्ड ग्रीनफील्ड स्मार्ट मेगासिटी</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- TATA SEMICONDUCTOR HIGHLIGHT -->
+        <section id="tata-hub" class="section anim-target">
+            <div class="tata-banner">
+                <div class="tata-tag">⚡ गेम चेंजर प्रोजेक्ट</div>
+                <h2 class="tata-title">भारत का पहला सेमीकंडक्टर हब (TATA Plant)</h2>
+                <p class="tata-desc">धोलेरा SIR में टाटा समूह का ₹91,000 करोड़ का सेमीकंडक्टर फैब प्लांट स्थापित हो रहा है।</p>
+                
+                <div class="tata-grid">
+                    <div class="tata-card">
+                        <div class="tata-icon">💼</div>
+                        <h4>₹91,000 करोड़ निवेश</h4>
+                        <p>टाटा इलेक्ट्रॉनिक्स और पॉवरचिप (PSMC) का संयुक्त उद्यम</p>
+                    </div>
+                    <div class="tata-card">
+                        <div class="tata-icon">⚡</div>
+                        <h4>2026 उत्पादन लक्ष्य</h4>
+                        <p>भारत की पहली स्वदेशी चिप उत्पादन यूनिट</p>
+                    </div>
+                    <div class="tata-card">
+                        <div class="tata-icon">🏢</div>
+                        <h4>50+ ग्लोबल वेंडर्स</h4>
+                        <p>अंतरराष्ट्रीय पार्ट निर्माता कंपनियों का आगमन</p>
+                    </div>
+                    <div class="tata-card">
+                        <div class="tata-icon">📈</div>
+                        <h4>जमीनों के दामों में उछाल</h4>
+                        <p>इंजीनियरों और कर्मचारियों के लिए आवास की भारी मांग</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- MASTER PLAN & FEATURES SECTION -->
+        <section id="master-plan" class="section anim-target">
+            <div class="section-header">
+                <span class="section-tag">मास्टर प्लान & इंफ्रास्ट्रक्चर</span>
+                <h2 class="section-title">2. वर्ल्ड-क्लास स्मार्ट सिटी सुविधाएं</h2>
+                <p class="section-desc">22 गांवों को मिलाकर 22 टाउन प्लानिंग (TP) योजनाओं के तहत सुव्यवस्थित विकास</p>
+            </div>
+
+            <div class="features-grid" id="features-container">
+                <!-- Dynamically filled feature items -->
+            </div>
+        </section>
+
+        <!-- PROJECT VIDEOS SHOWCASE -->
+        <section id="videos" class="section anim-target">
+            <div class="section-header">
+                <span class="section-tag">🎥 वास्तविक साइट वीडियो</span>
+                <h2 class="section-title">3. धोलेरा SIR & सैंक्चुअरी होम वीडियोज़</h2>
+                <p class="section-desc">एक्सप्रेसवे, एक्टिवेशन एरिया, और सैंक्चुअरी होम प्रोजेक्ट साइट की झलकियाँ देखें</p>
+            </div>
+
+            <div class="videos-grid">
+                <div class="video-card">
+                    <div class="video-wrapper">
+                        <video controls preload="metadata">
+                            <source src="resources/WhatsApp Video 2026-07-31 at 15.04.15.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="video-info">
+                        <h3>धोलेरा स्मार्ट सिटी - 4 Lane Expressway</h3>
+                        <p>अहमदाबाद-धोलेरा एक्सप्रेसवे और एक्टिवेशन ज़ोन इंफ्रास्ट्रक्चर</p>
+                    </div>
+                </div>
+
+                <div class="video-card">
+                    <div class="video-wrapper">
+                        <video controls preload="metadata">
+                            <source src="resources/WhatsApp Video 2026-07-31 at 15.04.32.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="video-info">
+                        <h3>सैंक्चुअरी होम साइट डेवलपमेंट</h3>
+                        <p>गेटेड कम्युनिटी, बाउंड्री वॉल और प्लॉट्स लेआउट</p>
+                    </div>
+                </div>
+
+                <div class="video-card">
+                    <div class="video-wrapper">
+                        <video controls preload="metadata">
+                            <source src="resources/WhatsApp Video 2026-07-31 at 15.05.12.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="video-info">
+                        <h3>मास्टर इंफ्रास्ट्रक्चर & TATA Zone</h3>
+                        <p>underground SCADA यूटिलिटीज और सोलर पार्क क्षेत्र</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- DOWNLOADS & BROCHURE SECTION -->
+        <section id="downloads" class="section anim-target">
+            <div class="section-header">
+                <span class="section-tag">📑 रिसोर्स & डाउनलोड्स</span>
+                <h2 class="section-title">4. ब्रोशर & आधिकारिक दस्तावेज़</h2>
+                <p class="section-desc">सैंक्चुअरी होम ब्रोशर, 30-स्लाइड्स प्रेजेंटेशन और कानूनी अप्रूवल स्कैन डाउनलोड करें</p>
+            </div>
+
+            <div class="resources-grid" id="resources-list">
+                <!-- Dynamically filled download items -->
+            </div>
+        </section>
+
+        <!-- FOOTER / CONTACT SECTION -->
+        <footer class="site-footer anim-target">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h2>ABDB रियलटेक प्राइवेट लिमिटेड</h2>
+                    <p>सैंक्चुअरी होम - धोलेरा स्मार्ट सिटी का प्रीमियम रेसिडेंशियल प्लॉटिंग प्रोजेक्ट</p>
+                </div>
+                <div class="footer-contact">
+                    <div class="contact-item">📍 धोलेरा SIR, गुजरात, भारत</div>
+                    <div class="contact-item">💎 दर: ₹6,250 / वर्ग गज (NA / NOC Clear)</div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 ABDB Realtech Pvt Ltd. All rights reserved. | Dholera Smart City SIR Project</p>
+            </div>
+        </footer>
+
     </main>
-
-    <!-- Navigation Footer -->
-    <footer class="bottom-nav">
-        <div class="nav-left">
-            <button id="prev-btn" class="nav-btn">❮ PREV</button>
-            <button id="next-btn" class="nav-btn primary">NEXT ❯</button>
-        </div>
-        
-        <div class="progress-bar-container">
-            <div class="progress-bar" id="progress-bar"></div>
-        </div>
-
-        <div class="nav-right">
-            <span class="slide-counter" id="slide-counter">Slide 1 of 30</span>
-        </div>
-    </footer>
-
-    <!-- Grid Overview Modal -->
-    <div class="grid-modal" id="grid-modal">
-        <div class="grid-header">
-            <h2>Slide Navigator (30 Slides)</h2>
-            <button id="close-grid" class="close-btn">✕</button>
-        </div>
-        <div class="grid-container" id="grid-container"></div>
-    </div>
 
     <script src="slides_data.js"></script>
     <script src="script.js"></script>
