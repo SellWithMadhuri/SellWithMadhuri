@@ -1,33 +1,48 @@
 <!DOCTYPE html>
-<html lang="hi">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>धोलेरा स्मार्ट सिटी & सैंक्चुअरी होम | ABDB रियलटेक</title>
+    <title>Dholera Smart City & Sanctuary Home | ABDB Realtech</title>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Background FX -->
+    <!-- Futuristic Animated Semiconductor & Metro Canvas Background -->
+    <canvas id="bg-canvas"></canvas>
+    
     <div class="stars-bg"></div>
     <div class="ambient-glow glow-1"></div>
     <div class="ambient-glow glow-2"></div>
     <div class="ambient-glow glow-3"></div>
 
-    <!-- Sticky Header Navigation -->
+    <!-- Ultra Aesthetic Cyber-Tech Fixed Top Header -->
     <header class="top-nav">
         <div class="brand">
-            <span class="badge">ABDB रियलटेक</span>
-            <span class="title-sub">धोलेरा स्मार्ट सिटी</span>
+            <div class="brand-logo-icon">
+                <span class="chip-dot"></span>
+                <span>ABDB</span>
+            </div>
+            <div class="brand-titles">
+                <span class="badge">Realtech</span>
+                <span class="title-sub">Dholera Smart City</span>
+            </div>
         </div>
-        <nav class="nav-links">
-            <a href="#hero">होम</a>
-            <a href="#overview">विज़न & आँकड़े</a>
-            <a href="#tata-hub">TATA सेमीकंडक्टर</a>
-            <a href="#master-plan">मास्टर प्लान</a>
-            <a href="#videos">प्रोजेक्ट वीडियोज़</a>
-            <a href="#downloads">डाउनलोड्स & ब्रोशर</a>
+        <nav class="nav-links" id="nav-links">
+            <a href="#hero">Home</a>
+            <a href="#overview">Vision & Stats</a>
+            <a href="#tata-hub"><span class="chip-pulse"></span>TATA Semiconductor</a>
+            <a href="#gallery">Photo Gallery</a>
+            <a href="#master-plan">Master Plan</a>
+            <a href="#videos">Project Videos</a>
+            <a href="#downloads">Downloads</a>
+            <a href="#contact" class="nav-contact-btn">📞 Contact Us</a>
         </nav>
+        <button class="hamburger-btn" id="hamburger-btn" aria-label="Toggle Navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
     </header>
 
     <!-- Main Scrollable Content -->
@@ -36,20 +51,21 @@
         <!-- HERO SECTION -->
         <section id="hero" class="hero-section anim-target">
             <div class="hero-content">
-                <span class="tag-pill">ऑफिशिअल प्रोजेक्ट शोकेस</span>
-                <h1 class="hero-title">धोलेरा स्मार्ट सिटी <br><span class="highlight-gold">& सैंक्चुअरी होम</span></h1>
-                <p class="hero-subtitle">भारत का पहला प्लान्ड ग्रीनफील्ड स्मार्ट मेगासिटी | दिल्ली-मुंबई इंडस्ट्रियल कॉरिडोर (DMIC)</p>
+                <span class="tag-pill">OFFICIAL PROJECT SHOWCASE | आधिकारिक प्रोजेक्ट शोकेस</span>
+                <h1 class="hero-title">Dholera Smart City <br><span class="highlight-gold">& Sanctuary Home</span></h1>
+                <p class="hero-subtitle">India's First Planned Greenfield Smart Megacity | भारत की पहली प्लान्ड ग्रीनफील्ड स्मार्ट मेगासिटी</p>
 
                 <div class="hero-badges">
-                    <div class="pill">📍 डेवलपर: ABDB रियलटेक प्राइवेट लिमिटेड</div>
-                    <div class="pill gold">💰 शुरुआती दर: ₹6,250 / वर्ग गज</div>
-                    <div class="pill green">✔ NA / NOC / टाइटल क्लियर प्लॉट्स</div>
-                    <div class="pill blue">🏗️ TATA सेमीकंडक्टर हब पास में</div>
+                    <div class="pill">📍 Developer: ABDB Realtech Pvt Ltd</div>
+                    <div class="pill gold">💰 प्लॉट रेट: ₹6,250 / वर्ग गज से शुरू</div>
+                    <div class="pill green">✔ 100% NA / NOC / टाइटल क्लियर प्लॉट्स</div>
+                    <div class="pill blue">🏗️ टाटा सेमीकंडक्टर हब के पास (Near TATA Hub)</div>
                 </div>
 
                 <div class="hero-actions">
-                    <a href="#downloads" class="btn btn-primary">📑 ब्रोशर डाउनलोड करें</a>
-                    <a href="#videos" class="btn btn-secondary">🎥 साइट वीडियो देखें</a>
+                    <a href="https://wa.me/918810231368?text=Hello%20Madhuri,%20I%20am%20interested%20in%20Dholera%20Smart%20City%20plots." target="_blank" class="btn btn-whatsapp">💬 व्हाट्सएप संपर्क (माधुरी): 8810231368</a>
+                    <a href="#downloads" class="btn btn-primary">📑 डाउनलोड ब्रोशर (Brochure)</a>
+                    <a href="#videos" class="btn btn-secondary">🎥 देखें प्रोजेक्ट वीडियो (Site Tour)</a>
                 </div>
             </div>
         </section>
@@ -57,43 +73,43 @@
         <!-- STATS & OVERVIEW SECTION -->
         <section id="overview" class="section anim-target">
             <div class="section-header text-center">
-                <span class="section-tag">बड़ा अवसर & विज़न</span>
-                <h2 class="section-title">1. धोलेरा SIR - भारत का भविष्य</h2>
-                <p class="section-desc">सिंगापुर से भी 1.25 गुना बड़ा 920 वर्ग किलोमीटर में फैला वर्ल्ड-क्लास स्मार्ट सिटी</p>
+                <span class="section-tag">MEGA OPPORTUNITY & VISION | स्वर्णिम निवेश का अवसर</span>
+                <h2 class="section-title">1. Dholera SIR - Future of India (भारत का भविष्य)</h2>
+                <p class="section-desc">920 वर्ग किलोमीटर में फैला सिंगापुर से 1.25 गुना बड़ा भारत का पहला स्मार्ट शहर</p>
             </div>
 
             <div class="stats-grid">
                 <div class="stat-card">
-                    <div class="stat-val">920 sq km</div>
-                    <div class="stat-lbl">कुल क्षेत्रफल (सिंगापुर 728 sq km)</div>
+                    <div class="stat-val">920 Sq. Km</div>
+                    <div class="stat-lbl">कुल क्षेत्रफल (सिंगापुर 728 Sq. Km)</div>
                 </div>
                 <div class="stat-card">
-                    <div class="stat-val">20,00,000</div>
-                    <div class="stat-lbl">अनुमानित भविष्य जनसंख्या</div>
+                    <div class="stat-val">20 लाख+</div>
+                    <div class="stat-lbl">आवास लक्षित आबादी (Resident Population)</div>
                 </div>
                 <div class="stat-card">
                     <div class="stat-val">8,00,000+</div>
-                    <div class="stat-lbl">आगामी नई नौकरियां</div>
+                    <div class="stat-lbl">नए हाई-टेक रोजगार (High-Tech Jobs)</div>
                 </div>
                 <div class="stat-card">
                     <div class="stat-val">₹6,250</div>
-                    <div class="stat-lbl">शुरुआती प्लॉट दर / वर्ग गज</div>
+                    <div class="stat-lbl">शुरुआती प्लॉट रेट / वर्ग गज</div>
                 </div>
             </div>
 
             <div class="compare-box mt-4">
                 <div class="compare-card current">
-                    <h3>सिंगापुर (Singapore)</h3>
-                    <div class="big-txt">728 वर्ग किमी</div>
-                    <p>एशिया का प्रमुख वैश्विक वित्तीय केंद्र</p>
+                    <h3>Singapore (सिंगापुर)</h3>
+                    <div class="big-txt">728 Sq. Km</div>
+                    <p>एशिया का प्रमुख ग्लोबल फाइनेंस हब</p>
                 </div>
                 <div class="compare-card vs">
                     <span>VS</span>
                 </div>
                 <div class="compare-card future">
-                    <h3>धोलेरा SIR (Dholera SIR)</h3>
-                    <div class="big-txt green-txt">920 वर्ग किमी</div>
-                    <p>भारत का पहला प्लैन्ड ग्रीनफील्ड स्मार्ट मेगासिटी</p>
+                    <h3>Dholera SIR (धोलेरा)</h3>
+                    <div class="big-txt green-txt">920 Sq. Km</div>
+                    <p>भारत का पहला नियोजित स्मार्ट मेगासिटी</p>
                 </div>
             </div>
         </section>
@@ -101,30 +117,190 @@
         <!-- TATA SEMICONDUCTOR HIGHLIGHT -->
         <section id="tata-hub" class="section anim-target">
             <div class="tata-banner">
-                <div class="tata-tag">⚡ गेम चेंजर प्रोजेक्ट</div>
-                <h2 class="tata-title">भारत का पहला सेमीकंडक्टर हब (TATA Plant)</h2>
-                <p class="tata-desc">धोलेरा SIR में टाटा समूह का ₹91,000 करोड़ का सेमीकंडक्टर फैब प्लांट स्थापित हो रहा है।</p>
+                <div class="tata-tag">⚡ GAME CHANGER PROJECT</div>
+                <h2 class="tata-title">India's 1st Semiconductor Fab Plant (TATA Hub)</h2>
+                <p class="tata-desc">TATA Group's mega ₹91,000 Crore Semiconductor Fab Facility setup in Dholera SIR.</p>
                 
                 <div class="tata-grid">
                     <div class="tata-card">
                         <div class="tata-icon">💼</div>
-                        <h4>₹91,000 करोड़ निवेश</h4>
-                        <p>टाटा इलेक्ट्रॉनिक्स और पॉवरचिप (PSMC) का संयुक्त उद्यम</p>
+                        <h4>₹91,000 Cr Investment</h4>
+                        <p>TATA Electronics & PSMC Taiwan Joint Venture</p>
                     </div>
                     <div class="tata-card">
                         <div class="tata-icon">⚡</div>
-                        <h4>2026 उत्पादन लक्ष्य</h4>
-                        <p>भारत की पहली स्वदेशी चिप उत्पादन यूनिट</p>
+                        <h4>2026 First Chip Target</h4>
+                        <p>India's First Indigenous Semiconductor Production</p>
                     </div>
                     <div class="tata-card">
                         <div class="tata-icon">🏢</div>
-                        <h4>50+ ग्लोबल वेंडर्स</h4>
-                        <p>अंतरराष्ट्रीय पार्ट निर्माता कंपनियों का आगमन</p>
+                        <h4>50+ Global Vendors</h4>
+                        <p>International Parts Manufacturers Ecosystem</p>
                     </div>
                     <div class="tata-card">
                         <div class="tata-icon">📈</div>
-                        <h4>जमीनों के दामों में उछाल</h4>
-                        <p>इंजीनियरों और कर्मचारियों के लिए आवास की भारी मांग</p>
+                        <h4>High Property Appreciation</h4>
+                        <p>Huge demand for residential plots by engineers & executives</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- HIGH-RES IMAGE GALLERY SHOWCASE -->
+        <section id="gallery" class="section anim-target">
+            <div class="section-header">
+                <span class="section-tag">🖼️ HIGH-RESOLUTION VISUALS</span>
+                <h2 class="section-title">2. Dholera Smart City & Sanctuary Home Gallery</h2>
+                <p class="section-desc">Next-Gen Infrastructure, 8K Architectural Visions & Exclusive Project Photos</p>
+            </div>
+
+            <div class="image-gallery-grid">
+                <div class="gallery-card">
+                    <div class="gallery-img-wrapper">
+                        <img src="resources/dholera_skyline.png" alt="Dholera Smart City Skyline" class="gallery-img">
+                        <div class="gallery-badge">8K ULTRA RES</div>
+                    </div>
+                    <div class="gallery-caption">
+                        <h3>Dholera Smart City Skyline & Expressway</h3>
+                        <p>Greenfield megacity, solar power hub and 6-lane access expressway</p>
+                    </div>
+                </div>
+
+                <div class="gallery-card">
+                    <div class="gallery-img-wrapper">
+                        <img src="resources/sanctuary_villas.png" alt="Sanctuary Home Luxury Villa Plots" class="gallery-img">
+                        <div class="gallery-badge">PREMIUM PROJECT</div>
+                    </div>
+                    <div class="gallery-caption">
+                        <h3>Sanctuary Home - Gated Community Plots</h3>
+                        <p>Luxury residential plotting, green parks and wide internal roads</p>
+                    </div>
+                </div>
+
+                <div class="gallery-card">
+                    <div class="gallery-img-wrapper">
+                        <img src="resources/tata_plant.png" alt="TATA Semiconductor Fab Plant" class="gallery-img">
+                        <div class="gallery-badge">₹91,000 CR HUB</div>
+                    </div>
+                    <div class="gallery-caption">
+                        <h3>TATA Semiconductor Fab Plant Dholera</h3>
+                        <p>India's landmark chip manufacturing facility & industrial ecosystem</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ROI INVESTMENT CALCULATOR & HIGHLIGHTS -->
+        <section id="roi-calculator" class="section anim-target">
+            <div class="section-header text-center">
+                <span class="section-tag">💰 HIGH-RETURN INVESTMENT HUB | निवेश एवं लाभ कैलक्यूलेटर</span>
+                <h2 class="section-title">3. Dholera SIR Investment & ROI Calculator (रिटर्न कैलकुलेटर)</h2>
+                <p class="section-desc">टाटा सेमीकंडक्टर प्लांट और अंतरराष्ट्रीय एयरपोर्ट से होने वाली प्रॉपर्टी ग्रोथ का अनुमान लगाएं</p>
+            </div>
+
+            <div class="calculator-container shadow-glow">
+                <div class="calc-inputs">
+                    <div class="input-group">
+                        <label for="plot-size">Plot Size / प्लॉट साइज (Sq. Yards / वर्ग गज):</label>
+                        <input type="number" id="plot-size" value="100" min="50" max="5000" step="10">
+                    </div>
+                    <div class="input-group">
+                        <label for="holding-years">Investment Period / समय अवधि (वर्ष):</label>
+                        <select id="holding-years">
+                            <option value="3">3 वर्ष (Early Activation Phase)</option>
+                            <option value="5" selected>5 वर्ष (TATA Chip Plant Production Phase)</option>
+                            <option value="10">10 वर्ष (Full Megacity Maturity Phase)</option>
+                        </select>
+                    </div>
+                    <div class="calc-btn-wrapper">
+                        <button id="btn-calculate" class="btn btn-primary">Calculate Projected ROI (रिटर्न देखें) 🚀</button>
+                    </div>
+                </div>
+
+                <div class="calc-results">
+                    <div class="result-box">
+                        <div class="res-lbl">Initial Investment / शुरुआती निवेश (@ ₹6,250/sq.yd)</div>
+                        <div class="res-val" id="res-initial">₹6,25,000</div>
+                    </div>
+                    <div class="result-box highlight-box">
+                        <div class="res-lbl">Projected Market Value / अनुमानित मूल्य</div>
+                        <div class="res-val gold-txt" id="res-projected">₹18,75,000</div>
+                    </div>
+                    <div class="result-box">
+                        <div class="res-lbl">Estimated ROI Return / संभावित लाभ</div>
+                        <div class="res-val green-txt" id="res-roi">+200% Return</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- MEGA INFRASTRUCTURE CONNECTIVITY -->
+        <section id="connectivity" class="section anim-target">
+            <div class="section-header text-center">
+                <span class="section-tag">✈️ WORLD-CLASS CONNECTIVITY | विश्वस्तरीय कनेक्टिविटी</span>
+                <h2 class="section-title">4. Mega Connectivity & Infra (प्रमुख इंफ्रास्ट्रक्चर)</h2>
+                <p class="section-desc">दिल्ली-मुंबई इंडस्ट्रियल कॉरिडोर (DMIC) पर स्थित सबसे रणनीतिक लोकेशन</p>
+            </div>
+
+            <div class="connectivity-grid">
+                <div class="connect-card">
+                    <div class="connect-icon">🛫</div>
+                    <h3>Dholera International Airport (इंटरनेशनल एयरपोर्ट)</h3>
+                    <p>प्रोजेक्ट से मात्र 15 मिनट की दूरी पर 2-रनवे वाला नया इंटरनेशनल एयरपोर्ट (नवागाम)।</p>
+                </div>
+                <div class="connect-card">
+                    <div class="connect-icon">🛣️</div>
+                    <h3>Ahmedabad-Dholera Expressway (4-लेन एक्सप्रेसवे)</h3>
+                    <p>अहमदाबाद से धोलेरा की यात्रा समय को घटाकर केवल 45 मिनट करने वाला हाई-स्पीड एक्सप्रेसवे।</p>
+                </div>
+                <div class="connect-card">
+                    <div class="connect-icon">🚆</div>
+                    <h3>Dholera Metro Bullet Line (मेट्रो / मोनोरेल)</h3>
+                    <p>सभी टाउन प्लानिंग (TP) स्कीम्स को जोड़ने वाली हाई-स्पीड मेट्रो एवं रैपिड रेल कनेक्टिविटी।</p>
+                </div>
+                <div class="connect-card">
+                    <div class="connect-icon">☀️</div>
+                    <h3>5,000 MW Solar Power Park (सोलर पावर पार्क)</h3>
+                    <p>24/7 ग्रीन एवं स्वच्छ ऊर्जा आपूर्ति हेतु भारत का सबसे बड़ा सिंगल-लोकेशन सोलर पार्क।</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 100% LEGAL & BUYER ASSURANCE CHECKLIST -->
+        <section id="legal-assurance" class="section anim-target">
+            <div class="legal-assurance-banner">
+                <div class="legal-tag">🛡️ 100% BUYER SAFETY & DUE DILIGENCE | कानूनी सुरक्षा एवं गारंटी</div>
+                <h2 class="legal-title">Sanctuary Home में निवेश 100% सुरक्षित क्यों है?</h2>
+                <p class="legal-desc">खरीदने से पहले सभी सरकारी मंजूरियों और स्पष्ट दस्तावेजों की 100% कानूनी पारदर्शिता।</p>
+
+                <div class="legal-checklist-grid">
+                    <div class="checklist-item">
+                        <span class="check-icon">✔</span>
+                        <div>
+                            <h4>100% NA / NOC टाइटल क्लियर प्लॉट्स</h4>
+                            <p>गैर-कृषि (Non-Agricultural) अनुमति एवं स्पष्ट एकल स्वामित्व दस्तावेज।</p>
+                        </div>
+                    </div>
+                    <div class="checklist-item">
+                        <span class="check-icon">✔</span>
+                        <div>
+                            <h4>TP Scheme & कलेक्टर अप्रूव्ड</h4>
+                            <p>टाउन प्लानिंग (TP Scheme 2) स्वीकृत लेआउट एवं प्लॉट्स का डिमार्केशन।</p>
+                        </div>
+                    </div>
+                    <div class="checklist-item">
+                        <span class="check-icon">✔</span>
+                        <div>
+                            <h4>तुरंत रजिस्ट्री एवं 7/12 नामकरण</h4>
+                            <p>खरीदते ही आपके नाम पर तुरंत कानूनी रजिस्ट्री एवं 7/12 दाखिला नामांतरण।</p>
+                        </div>
+                    </div>
+                    <div class="checklist-item">
+                        <span class="check-icon">✔</span>
+                        <div>
+                            <h4>गेटेड कम्युनिटी इंफ्रास्ट्रक्चर</h4>
+                            <p>बाउंड्री वॉल, 24/7 सुरक्षा गेट, चौड़ी आंतरिक सड़कें एवं पानी/बिजली कनेक्शन।</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -133,9 +309,9 @@
         <!-- MASTER PLAN & FEATURES SECTION -->
         <section id="master-plan" class="section anim-target">
             <div class="section-header">
-                <span class="section-tag">मास्टर प्लान & इंफ्रास्ट्रक्चर</span>
-                <h2 class="section-title">2. वर्ल्ड-क्लास स्मार्ट सिटी सुविधाएं</h2>
-                <p class="section-desc">22 गांवों को मिलाकर 22 टाउन प्लानिंग (TP) योजनाओं के तहत सुव्यवस्थित विकास</p>
+                <span class="section-tag">MASTER PLAN & INFRASTRUCTURE</span>
+                <h2 class="section-title">5. World-Class Smart City Features</h2>
+                <p class="section-desc">22 Town Planning (TP) Schemes uniting 22 villages into a smart township</p>
             </div>
 
             <div class="features-grid" id="features-container">
@@ -146,9 +322,9 @@
         <!-- PROJECT VIDEOS SHOWCASE -->
         <section id="videos" class="section anim-target">
             <div class="section-header">
-                <span class="section-tag">🎥 वास्तविक साइट वीडियो</span>
-                <h2 class="section-title">3. धोलेरा SIR & सैंक्चुअरी होम वीडियोज़</h2>
-                <p class="section-desc">एक्सप्रेसवे, एक्टिवेशन एरिया, और सैंक्चुअरी होम प्रोजेक्ट साइट की झलकियाँ देखें</p>
+                <span class="section-tag">🎥 REAL SITE VIDEOS</span>
+                <h2 class="section-title">6. Dholera SIR & Sanctuary Home Videos</h2>
+                <p class="section-desc">Expressway, Activation Area and Sanctuary Home Gated Community Site Tour</p>
             </div>
 
             <div class="videos-grid">
@@ -159,8 +335,8 @@
                         </video>
                     </div>
                     <div class="video-info">
-                        <h3>धोलेरा स्मार्ट सिटी - 4 Lane Expressway</h3>
-                        <p>अहमदाबाद-धोलेरा एक्सप्रेसवे और एक्टिवेशन ज़ोन इंफ्रास्ट्रक्चर</p>
+                        <h3>Dholera Smart City - 4-Lane Expressway</h3>
+                        <p>Ahmedabad-Dholera Expressway & Activation Area Infrastructure</p>
                     </div>
                 </div>
 
@@ -171,8 +347,8 @@
                         </video>
                     </div>
                     <div class="video-info">
-                        <h3>सैंक्चुअरी होम साइट डेवलपमेंट</h3>
-                        <p>गेटेड कम्युनिटी, बाउंड्री वॉल और प्लॉट्स लेआउट</p>
+                        <h3>Sanctuary Home Site Development</h3>
+                        <p>Gated community boundary wall, entrance gate & plot layout</p>
                     </div>
                 </div>
 
@@ -183,8 +359,8 @@
                         </video>
                     </div>
                     <div class="video-info">
-                        <h3>मास्टर इंफ्रास्ट्रक्चर & TATA Zone</h3>
-                        <p>underground SCADA यूटिलिटीज और सोलर पार्क क्षेत्र</p>
+                        <h3>Master Infrastructure & TATA Zone</h3>
+                        <p>Underground SCADA utilities & solar power park region</p>
                     </div>
                 </div>
             </div>
@@ -193,9 +369,9 @@
         <!-- DOWNLOADS & BROCHURE SECTION -->
         <section id="downloads" class="section anim-target">
             <div class="section-header">
-                <span class="section-tag">📑 रिसोर्स & डाउनलोड्स</span>
-                <h2 class="section-title">4. ब्रोशर & आधिकारिक दस्तावेज़</h2>
-                <p class="section-desc">सैंक्चुअरी होम ब्रोशर, 30-स्लाइड्स प्रेजेंटेशन और कानूनी अप्रूवल स्कैन डाउनलोड करें</p>
+                <span class="section-tag">📑 RESOURCES & DOWNLOADS</span>
+                <h2 class="section-title">5. Official Brochures & Legal Scans</h2>
+                <p class="section-desc">Download Sanctuary Home Brochure, 30-Slide Decks and Approval Document Scans</p>
             </div>
 
             <div class="resources-grid" id="resources-list">
@@ -203,7 +379,136 @@
             </div>
         </section>
 
-        <!-- FOOTER / CONTACT SECTION -->
+        <!-- CONTACT US SECTION -->
+        <section id="contact" class="section anim-target">
+            <div class="section-header text-center">
+                <span class="section-tag">📞 CONTACT US</span>
+                <h2 class="section-title">6. Contact Representative & Social Media</h2>
+                <p class="section-desc">Book your plot in Sanctuary Home Dholera Smart City today</p>
+            </div>
+
+            <div class="contact-grid">
+                <!-- Direct Contact Details -->
+                <div class="contact-card shadow-glow">
+                    <div class="contact-icon">📱</div>
+                    <h3>Contact Representative</h3>
+                    <p class="contact-name">Madhuri</p>
+                    <p class="contact-phone">WhatsApp / Phone: +91 8810231368</p>
+                    <a href="https://wa.me/918810231368?text=Hello%20Madhuri,%20I%20am%20interested%20in%20Dholera%20Smart%20City%20plots." target="_blank" class="btn btn-whatsapp mt-3">
+                        💬 Start WhatsApp Chat
+                    </a>
+                </div>
+
+                <!-- Office Location / Map Link -->
+                <div class="contact-card">
+                    <div class="contact-icon">📍</div>
+                    <h3>Office Address & Location</h3>
+                    <p>Sector 18, Noida, Uttar Pradesh 201301</p>
+                    <a href="https://www.google.com/maps/place/Sector+18,+Noida,+Uttar+Pradesh+201301/@28.5697882,77.3206649,17z/data=!3m1!4b1!4m6!3m5!1s0x390ce44f2ca1470f:0x8cff905b6cbfb433!8m2!3d28.570317!4d77.3218196!16s%2Fg%2F1vc6bs1s?entry=ttu&g_ep=EgoyMDI2MDcyOS4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="btn btn-secondary mt-3">
+                        🗺️ View on Google Maps
+                    </a>
+                </div>
+
+                <!-- Social Media Handles -->
+                <div class="contact-card">
+                    <div class="contact-icon">🌐</div>
+                    <h3>Social Media Handles</h3>
+                    <div class="social-links-list">
+                        <a href="https://www.instagram.com/dholera_properties" target="_blank" class="social-btn instagram">
+                            📸 Instagram (@dholera_properties)
+                        </a>
+                        <a href="https://www.threads.com/@dholera_properties" target="_blank" class="social-btn threads">
+                            🧵 Threads (@dholera_properties)
+                        </a>
+                        <a href="https://www.x.com/dholera_properties" target="_blank" class="social-btn x-twitter">
+                            𝕏 Twitter / X (@dholera_properties)
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FOOTER SECTION -->
+        <footer class="site-footer anim-target">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h2>ABDB Realtech Pvt. Ltd.</h2>
+                    <p>Sanctuary Home - Premium Residential Plotting Project in Dholera Smart City</p>
+                </div>
+                <div class="footer-contact">
+                    <div class="contact-item">📍 Dholera SIR, Gujarat, India</div>
+                    <div class="contact-item">📞 Contact Madhuri: +91 8810231368</div>
+                    <div class="contact-item">💎 Price: ₹6,250 / Sq. Yard (NA / NOC Clear)</div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 ABDB Realtech Pvt Ltd. All rights reserved. | Dholera Smart City SIR Project</p>
+            </div>
+        </footer>
+
+    </main>
+
+    <script src="slides_data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>ोड करें</p>
+            </div>
+
+            <div class="resources-grid" id="resources-list">
+                <!-- Dynamically filled download items -->
+            </div>
+        </section>
+
+        <!-- CONTACT US SECTION -->
+        <section id="contact" class="section anim-target">
+            <div class="section-header text-center">
+                <span class="section-tag">📞 संपर्क करें (Contact Us)</span>
+                <h2 class="section-title">5. संपर्क विवरण & सोशल मीडिया</h2>
+                <p class="section-desc">सैंक्चुअरी होम प्लॉट्स बुकिंग और जानकारी के लिए अभी संपर्क करें</p>
+            </div>
+
+            <div class="contact-grid">
+                <!-- Direct Contact Details -->
+                <div class="contact-card shadow-glow">
+                    <div class="contact-icon">📱</div>
+                    <h3>संपर्क प्रतिनिधि</h3>
+                    <p class="contact-name">माधुरी (Madhuri)</p>
+                    <p class="contact-phone">WhatsApp / Phone: +91 8810231368</p>
+                    <a href="https://wa.me/918810231368?text=Hello%20Madhuri,%20I%20am%20interested%20in%20Dholera%20Smart%20City%20plots." target="_blank" class="btn btn-whatsapp mt-3">
+                        💬 WhatsApp Chat Start
+                    </a>
+                </div>
+
+                <!-- Office Location / Map Link -->
+                <div class="contact-card">
+                    <div class="contact-icon">📍</div>
+                    <h3>कार्यालय पता & लोकेशन</h3>
+                    <p>Sector 18, Noida, Uttar Pradesh 201301</p>
+                    <a href="https://www.google.com/maps/place/Sector+18,+Noida,+Uttar+Pradesh+201301/@28.5697882,77.3206649,17z/data=!3m1!4b1!4m6!3m5!1s0x390ce44f2ca1470f:0x8cff905b6cbfb433!8m2!3d28.570317!4d77.3218196!16s%2Fg%2F1vc6bs1s?entry=ttu&g_ep=EgoyMDI2MDcyOS4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="btn btn-secondary mt-3">
+                        🗺️ Google Maps पर देखें
+                    </a>
+                </div>
+
+                <!-- Social Media Handles -->
+                <div class="contact-card">
+                    <div class="contact-icon">🌐</div>
+                    <h3>सोशल मीडिया हैंडल्स</h3>
+                    <div class="social-links-list">
+                        <a href="https://www.instagram.com/dholera_properties" target="_blank" class="social-btn instagram">
+                            📸 Instagram (@dholera_properties)
+                        </a>
+                        <a href="https://www.threads.com/@dholera_properties" target="_blank" class="social-btn threads">
+                            🧵 Threads (@dholera_properties)
+                        </a>
+                        <a href="https://www.x.com/dholera_properties" target="_blank" class="social-btn x-twitter">
+                            𝕏 Twitter / X (@dholera_properties)
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FOOTER SECTION -->
         <footer class="site-footer anim-target">
             <div class="footer-content">
                 <div class="footer-brand">
@@ -212,6 +517,7 @@
                 </div>
                 <div class="footer-contact">
                     <div class="contact-item">📍 धोलेरा SIR, गुजरात, भारत</div>
+                    <div class="contact-item">📞 माधुरी: +91 8810231368</div>
                     <div class="contact-item">💎 दर: ₹6,250 / वर्ग गज (NA / NOC Clear)</div>
                 </div>
             </div>
