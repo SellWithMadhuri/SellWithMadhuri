@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DHOLERA SIR & Sanctuary Home - Cinematic 30-Slide Presentation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="stars-bg"></div>
+    <div class="ambient-glow glow-1"></div>
+    <div class="ambient-glow glow-2"></div>
+
+    <!-- Presentation Top Header Bar -->
+    <header class="top-nav">
+        <div class="brand">
+            <span class="badge">ABDB रियलटेक</span>
+            <span class="title-sub">धोलेरा स्मार्ट सिटी</span>
+        </div>
+        <div class="controls">
+            <button id="btn-overview" title="Grid View (Press G)"><span>GRID</span> 🎛️</button>
+            <button id="btn-fullscreen" title="Toggle Fullscreen (F11)"><span>FULLSCREEN</span> ⛶</button>
+        </div>
+    </header>
+
+    <!-- Slide Container -->
+    <main class="presentation-stage">
+        <div class="slides-viewport" id="slides-viewport">
+            <!-- Slides dynamically rendered here -->
+        </div>
+    </main>
+
+    <!-- Navigation Footer -->
+    <footer class="bottom-nav">
+        <div class="nav-left">
+            <button id="prev-btn" class="nav-btn">❮ PREV</button>
+            <button id="next-btn" class="nav-btn primary">NEXT ❯</button>
+        </div>
+        
+        <div class="progress-bar-container">
+            <div class="progress-bar" id="progress-bar"></div>
+        </div>
+
+        <div class="nav-right">
+            <span class="slide-counter" id="slide-counter">Slide 1 of 30</span>
+        </div>
+    </footer>
+
+    <!-- Grid Overview Modal -->
+    <div class="grid-modal" id="grid-modal">
+        <div class="grid-header">
+            <h2>Slide Navigator (30 Slides)</h2>
+            <button id="close-grid" class="close-btn">✕</button>
+        </div>
+        <div class="grid-container" id="grid-container"></div>
+    </div>
+
+    <script src="slides_data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
